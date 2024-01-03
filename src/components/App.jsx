@@ -25,11 +25,10 @@ const App = () => {
       );
       const newImages = response.data.hits;
       setImages(prevImages => [...prevImages, ...newImages]);
-      setPage(newPage);
     } catch (error) {
       console.error('Error fetching images:', error);
     } finally {
-      setLoading(false); // Stop loading, whether successful or not
+      setLoading(false);
     }
   };
 
